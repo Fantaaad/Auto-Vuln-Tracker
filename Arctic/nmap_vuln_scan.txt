@@ -1,0 +1,8 @@
+# Nmap 7.95 scan initiated Mon Jul  7 12:32:42 2025 as: /usr/lib/nmap/nmap --privileged -sV --script vuln -oN /home/kali/VulnTracker/Arctic/nmap_vuln_scan.txt 10.10.10.10
+Nmap scan report for 10.10.10.10
+Host is up (0.00086s latency).
+All 1000 scanned ports on 10.10.10.10 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul  7 12:32:58 2025 -- 1 IP address (1 host up) scanned in 16.20 seconds
