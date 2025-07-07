@@ -1,16 +1,18 @@
 # Auto Vuln Tracker for Kali Linux
 
-A simple tool to **automate vulnerability scans, log results, and generate graphs** while practicing pentesting on Kali Linux.
+**Auto Vuln Tracker** is a simple tool to **automate vulnerability scanning, logging, and progress visualization** while practicing pentesting on **Kali Linux**.
+
+It helps you track your learning, organize your HackTheBox or lab practice, and visually measure your progress while learning vulnerability detection.
 
 ---
 
-## 🛠️ Features
+## ✨ Features
 
-✅ Runs `nmap` with vuln scripts on any target IP.  
-✅ Automatically saves the scan to a folder with the machine's name.  
-✅ Logs the number of potential vulnerabilities found in a CSV file.  
-✅ Generates a graph to visualize your scanning progress over time.  
-✅ Helps you organize your HackTheBox or lab practice in a structured way.
+✅ Runs `nmap` with vulnerability scripts against a target IP automatically.  
+✅ Saves scans in a folder named after the machine.  
+✅ Logs the number of potential vulnerabilities in a CSV file.  
+✅ Generates a visual graph showing vulnerabilities found across machines.  
+✅ Keeps your pentesting practice organized and structured.
 
 ---
 
@@ -20,12 +22,12 @@ A simple tool to **automate vulnerability scans, log results, and generate graph
   - `bash`
   - `nmap`
   - `python3`
-  - Python `matplotlib`
+  - Python library: `matplotlib`
 
-To install `matplotlib` if not installed:
+**Install dependencies if needed:**
 ```bash
 sudo apt update
-sudo apt install python3-pip -y
+sudo apt install nmap python3 python3-pip -y
 pip3 install matplotlib
 ```
 
@@ -35,29 +37,28 @@ pip3 install matplotlib
 
 1️⃣ Clone your repository:
 ```bash
-git clone https://github.com/<your_username>/Auto-Vuln-Tracker.git
+git clone https://github.com/Fantaaad/Auto-Vuln-Tracker.git
 ```
-2️⃣ Move scripts to your working folder:
+
+2️⃣ Move into your working directory:
 ```bash
-mkdir -p ~/VulnTracker
-mv Auto-Vuln-Tracker/auto_vuln_tracker.sh ~/VulnTracker/
-mv Auto-Vuln-Tracker/generate_vuln_graph.py ~/VulnTracker/
+cd Auto-Vuln-Tracker
 ```
+
 3️⃣ Make scripts executable:
 ```bash
-chmod +x ~/VulnTracker/auto_vuln_tracker.sh
-chmod +x ~/VulnTracker/generate_vuln_graph.py
+chmod +x auto_vuln_tracker.sh
+chmod +x generate_vuln_graph.py
 ```
 
 ---
 
 ## 🚀 Usage
 
-After you finish enumerating a machine or want to check vulnerabilities:
+After you complete or want to scan a machine:
 
-### Run the scanner:
+### ✅ **Run the vulnerability tracker:**
 ```bash
-cd ~/VulnTracker
 ./auto_vuln_tracker.sh <IP> <MachineName>
 ```
 **Example:**
@@ -66,24 +67,23 @@ cd ~/VulnTracker
 ```
 
 This will:
-✅ Run `nmap` with vuln scripts on the target IP.  
+✅ Run `nmap` with vuln scripts on the specified IP.  
 ✅ Save results in:
 ```
 ~/VulnTracker/<MachineName>/nmap_vuln_scan.txt
 ```
-✅ Log results in:
+✅ Log the machine, IP, vulnerabilities found, and date into:
 ```
 ~/VulnTracker/vuln_log.csv
 ```
-✅ Generate/Update your graph:
+✅ Generate or update your visual summary:
 ```
 ~/VulnTracker/vuln_summary.png
 ```
 
 ---
 
-### View your graph:
-To open the graph:
+### ✅ **View your vulnerability progress graph:**
 ```bash
 xdg-open ~/VulnTracker/vuln_summary.png
 ```
@@ -92,9 +92,9 @@ xdg-open ~/VulnTracker/vuln_summary.png
 
 ## 🗂️ Folder Structure
 
-- `~/VulnTracker/<MachineName>/` : Stores each scan.
-- `~/VulnTracker/vuln_log.csv` : Stores your vulnerability scan history.
-- `~/VulnTracker/vuln_summary.png` : Visual summary of your progress.
+- `~/VulnTracker/<MachineName>/` - Contains individual scans and reports.
+- `~/VulnTracker/vuln_log.csv` - Tracks your scans and detected vulnerabilities.
+- `~/VulnTracker/vuln_summary.png` - Shows your progress visually.
 
 ---
 
@@ -106,8 +106,8 @@ MIT License
 
 ## 🤝 Contributing
 
-This is for personal practice while learning pentesting. Feel free to fork and modify it to fit your workflow.
+This project is for personal pentesting practice and workflow structuring while learning. Feel free to fork and adapt it to your workflow or learning goals.
 
 ---
 
-**✨ Track your pentesting learning with real data, visualize your progress, and keep your practice organized.**
+**✨ Organize your pentesting practice while visualizing your growth, automating your scans, and building a real workflow on Kali Linux.**
